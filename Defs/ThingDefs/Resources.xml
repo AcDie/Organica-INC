@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+
+	<ThingDef Name="ResourceBase" Abstract="True">
+		<defName>base_Resource</defName>
+		<thingClass>ThingResource</thingClass>
+		<label>Unspecified resource</label>
+		<category>Item</category>
+		<eType>Item</eType>
+		<isResource>true</isResource>
+		<useStandardHealth>true</useStandardHealth>
+		<selectable>true</selectable>
+		<maxHealth>100</maxHealth>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+		<description>Resource lacks desc.</description>
+		<comps>
+			<li><compClass>CompForbiddable</compClass></li>
+		</comps>
+		<beauty>Ugly</beauty>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawPotatoes</defName>
+		<label>Potatoes</label>
+		<description>Raw potatoes.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Potatoes</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawBerries</defName>
+		<label>Berries</label>
+		<description>Assorted berries. Nice to eat, even when raw.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Berries</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>4.0</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawAgave</defName>
+		<label>Agave fruit</label>
+		<description>Raw agave fruit.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/AgaveFruit</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawTomato</defName>
+		<label>Tomatoes</label>
+		<description>Raw tomatoes.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Tomato</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawCarrot</defName>
+		<label>Carrots</label>
+		<description>Raw carrots.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Carrot</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawOnion</defName>
+		<label>Onion</label>
+		<description>Raw onion.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Onion</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawRadish</defName>
+		<label>Radish</label>
+		<description>Raw radish.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Radish</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RawWheat</defName>
+		<label>Wheat</label>
+		<description>Raw wheat.</description>
+		<texturePath>Things/Item/Resource/PlantFoodRaw/Wheat</texturePath>
+		<interactSound>FoodDrop</interactSound>
+		<basePrice>2.5</basePrice>
+		<food>
+			<quality>Raw</quality>
+			<nutrition>5</nutrition>
+			<eatenDirectThought>AteRawFood</eatenDirectThought>
+			<eatEffect>EatVegetarian</eatEffect>
+		</food>
+		<storeCategories>
+			<li>PlantFoodRaw</li>
+		</storeCategories>
+	</ThingDef>
+
+</Resources>

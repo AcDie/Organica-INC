@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Plants>
+
+
+	<ThingDef Name="PlantBase" Abstract="True">
+		<eType>Plant</eType>
+		<category>Plant</category>
+		<thingClass>Plant</thingClass>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<flammability>1.0</flammability>
+		<useStandardHealth>True</useStandardHealth>
+		<maxHealth>75</maxHealth>
+		<tickerType>Rare</tickerType>
+		<selectable>False</selectable>
+		<neverMultiSelect>True</neverMultiSelect>
+		<drawerType>MapMeshOnly</drawerType>
+		<baseMaterialType>PlantCutout</baseMaterialType>
+		<plant>
+			<minFertility>0.5</minFertility>
+			<fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>0.48</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<minGlowToGrow>Overlit</minGlowToGrow>
+			<seedShootMinGrowthPercent>0.6</seedShootMinGrowthPercent>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.00</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+
+
+
+
+	<!--=========================== Crops ==============================-->
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantPotato</defName>
+		<label>Potato plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A simple, highly nutritious tuber. Grows well in relatively poor soil.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/PotatoPlant</textureFolderPath>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>40</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawPotatoes</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>6.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>0.48</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantStrawberry</defName>
+		<label>Strawberry plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A fragile but tasty fruit. Delicious even when raw, it needs rich soil to grow properly.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/StrawberryPlant</textureFolderPath>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>40</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawBerries</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>4.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>0.48</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+
+
+
+	<!--=========================== Decorative ==============================-->
+
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantRose</defName>
+		<label>Rose</label>
+		<maxHealth>85</maxHealth>
+		<description>A beautiful cultivated flower.</description>
+		<beauty>Gorgeous</beauty>
+		<textureFolderPath>Things/Plant/Rose</textureFolderPath>
+		<overDraw>True</overDraw>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<groundPlantable>True</groundPlantable>
+			<minGlowToGrow>Lit</minGlowToGrow>
+			<maxFoodYield>0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>140000</lifeSpan>
+			<fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
+			<destroyOnHarvest>True</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+
+
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantDaylily</defName>
+		<label>Daylily</label>
+		<maxHealth>85</maxHealth>
+		<description>A beautiful cultivated flower.</description>
+		<beauty>Gorgeous</beauty>
+		<textureFolderPath>Things/Plant/Daylily</textureFolderPath>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<sunShadowInfo>
+			<baseWidth>0.3</baseWidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.3</tallness>
+		</sunShadowInfo>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<groundPlantable>true</groundPlantable>
+			<minGlowToGrow>Lit</minGlowToGrow>
+			<maxFoodYield>0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>60000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+	<!--===========================  Wild - clustering bushes (some harvestable) ==============================-->
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantAgave</defName>
+		<label>Agave</label>
+		<maxHealth>120</maxHealth>
+		<description>Large-leafed desert plant with edible flowers and stalks.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/Agave</textureFolderPath>
+		<selectable>true</selectable>
+		<sunShadowInfo>
+			<baseWidth>0.2</baseWidth>
+			<baseHeight>0.2</baseHeight>
+			<tallness>0.6</tallness>
+		</sunShadowInfo>
+		<fillPercent>0.25</fillPercent>
+		<pathCost>30</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>40</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawAgave</harvestedThingDef>
+			<maxFoodYield>7.0</maxFoodYield>
+			<minFertility>0.3</minFertility>
+			<wildCommonality>0.3</wildCommonality>
+			<visualSizeRange>
+				<min>0.7</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<growthPer20kTicks>0.45</growthPer20kTicks>
+			<topWindExposure>0.3</topWindExposure>
+			<seedShootRadius>3</seedShootRadius>
+			<seedEmitAveragePer20kTicks>0.40</seedEmitAveragePer20kTicks>
+			<lifeSpan>500000</lifeSpan>
+			<fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
+			<generateClusterSizeRange>
+				<min>3</min>
+				<max>10</max>
+			</generateClusterSizeRange>
+		</plant>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantRaspberry</defName>
+		<label>Raspberry bush</label>
+		<maxHealth>120</maxHealth>
+		<description>Bushy plant with delicious red berries.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/Raspberry</textureFolderPath>
+		<selectable>true</selectable>
+		<sunShadowInfo>
+			<baseWidth>0.6</baseWidth>
+			<baseHeight>0.6</baseHeight>
+			<tallness>0.2</tallness>
+		</sunShadowInfo>
+		<fillPercent>0.25</fillPercent>
+		<pathCost>30</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>40</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawBerries</harvestedThingDef>
+			<maxFoodYield>7.0</maxFoodYield>
+			<minFertility>0.5</minFertility>
+			<wildCommonality>0.3</wildCommonality>
+			<visualSizeRange>
+				<min>0.7</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<growthPer20kTicks>0.45</growthPer20kTicks>
+			<topWindExposure>0.3</topWindExposure>
+			<seedShootRadius>3</seedShootRadius>
+			<seedEmitAveragePer20kTicks>0.40</seedEmitAveragePer20kTicks>
+			<lifeSpan>500000</lifeSpan>
+			<fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
+			<generateClusterSizeRange>
+				<min>3</min>
+				<max>10</max>
+			</generateClusterSizeRange>
+		</plant>
+	</ThingDef>
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantBush</defName>
+		<label>Bush</label>
+		<maxHealth>120</maxHealth>
+		<description>Short shrub. Does not typically talk.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/Bush</textureFolderPath>
+		<selectable>true</selectable>
+		<sunShadowInfo>
+			<baseWidth>0.37</baseWidth>
+			<baseHeight>0.37</baseHeight>
+			<tallness>0.2</tallness>
+		</sunShadowInfo>
+		<fillPercent>0.25</fillPercent>
+		<pathCost>30</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>30</nutrition>
+		</food>
+		<plant>
+			<minFertility>0.4</minFertility>
+			<wildCommonality>0.7</wildCommonality>
+			<visualSizeRange>
+				<min>0.7</min>
+				<max>1.1</max>
+			</visualSizeRange>
+			<growthPer20kTicks>0.30</growthPer20kTicks>
+			<topWindExposure>0.3</topWindExposure>
+			<seedShootRadius>3</seedShootRadius>
+			<seedEmitAveragePer20kTicks>0.35</seedEmitAveragePer20kTicks>
+			<lifeSpan>500000</lifeSpan>
+			<fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
+			<generateClusterSizeRange>
+				<min>2</min>
+				<max>6</max>
+			</generateClusterSizeRange>
+		</plant>
+	</ThingDef>
+
+
+
+
+
+	<!--======================= Wild plants - carpets ========================-->
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantPovertyGrass</defName>
+		<label>Poverty grass</label>
+		<maxHealth>85</maxHealth>
+		<description>Hardy wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/PovertyGrass</textureFolderPath>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>15</nutrition>
+		</food>
+		<plant>
+			<minFertility>0.05</minFertility>
+			<wildCommonality>7.0</wildCommonality>
+			<maxMeshCount>9</maxMeshCount>
+			<visualSizeRange>
+				<min>0.4</min>
+				<max>0.6</max>
+			</visualSizeRange>
+			<growthPer20kTicks>0.40</growthPer20kTicks>
+			<topWindExposure>0.4</topWindExposure>
+			<seedShootRadius>8</seedShootRadius>
+			<seedEmitAveragePer20kTicks>0.9</seedEmitAveragePer20kTicks>
+			<lifeSpan>300000</lifeSpan>
+			<fertilityFactorGrowthRate>0.60</fertilityFactorGrowthRate>
+			<fertilityFactorPlantChance>0.60</fertilityFactorPlantChance>
+		</plant>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantDandelion</defName>
+		<label>Dandelions</label>
+		<maxHealth>85</maxHealth>
+		<description>Common small flower. Though it is often considered a weed because of its fecundity, it is pleasant to look at</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/Dandelion</textureFolderPath>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>15</nutrition>
+		</food>
+		<plant>
+			<groundPlantable>true</groundPlantable>
+			<minFertility>0.05</minFertility>
+			<wildCommonality>0.8</wildCommonality>
+			<maxMeshCount>32</maxMeshCount>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>0.4</max>
+			</visualSizeRange>
+			<growthPer20kTicks>0.40</growthPer20kTicks>
+			<topWindExposure>0.3</topWindExposure>
+			<seedShootRadius>2.5</seedShootRadius>
+			<seedEmitAveragePer20kTicks>1</seedEmitAveragePer20kTicks>
+			<lifeSpan>240000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<fertilityFactorPlantChance>1.0</fertilityFactorPlantChance>
+			<generateClusterSizeRange>
+				<min>4</min>
+				<max>14</max>
+			</generateClusterSizeRange>
+		</plant>
+	</ThingDef>
+
+
+	<!--============================ Wild - Cacti ============================-->
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantSaguaroCactus</defName>
+		<label>Saguaro cactus</label>
+		<maxHealth>200</maxHealth>
+		<description>Large cactus native to arid Earth environments.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/SaguaroCactus</textureFolderPath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<selectable>true</selectable>
+		<fillPercent>0.35</fillPercent>
+		<sunShadowInfo>
+			<baseWidth>0.3</baseWidth>
+			<baseHeight>0.3</baseHeight>
+			<tallness>0.3</tallness>
+		</sunShadowInfo>
+		<passability>Impassable</passability>
+		<plant>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.0</max>
+			</visualSizeRange>
+			<wildCommonality>0.3</wildCommonality>
+			<minFertility>0.05</minFertility>
+			<growthPer20kTicks>0.14</growthPer20kTicks>
+			<topWindExposure>0.08</topWindExposure>
+			<seedShootRadius>15</seedShootRadius>
+			<seedEmitAveragePer20kTicks>0.05</seedEmitAveragePer20kTicks>
+			<lifeSpan>800000</lifeSpan>
+			<fertilityFactorGrowthRate>0</fertilityFactorGrowthRate>
+		</plant>
+	</ThingDef>
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantPincushionCactus</defName>
+		<label>Pincushion cactus</label>
+		<maxHealth>150</maxHealth>
+		<description>Short cactus, so named because it resembles a pincushion.</description>
+		<beauty>Neutral</beauty>
+		<textureFolderPath>Things/Plant/PincushionCactus</textureFolderPath>
+		<selectable>true</selectable>
+		<pathCost>30</pathCost>
+		<plant>
+			<minFertility>0.05</minFertility>
+			<wildCommonality>0.3</wildCommonality>
+			<visualSizeRange>
+				<min>0.40</min>
+				<max>0.65</max>
+			</visualSizeRange>
+			<growthPer20kTicks>0.30</growthPer20kTicks>
+			<topWindExposure>0.0</topWindExposure>
+			<seedShootRadius>4</seedShootRadius>
+			<seedEmitAveragePer20kTicks>0.10</seedEmitAveragePer20kTicks>
+			<lifeSpan>800000</lifeSpan>
+			<fertilityFactorGrowthRate>0</fertilityFactorGrowthRate>
+			<generateClusterSizeRange>
+				<min>3</min>
+				<max>5</max>
+			</generateClusterSizeRange>
+			<maxMeshCount>4</maxMeshCount>
+		</plant>
+	</ThingDef>
+
+	<!--=========================== Crops ==============================-->
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantCarrot</defName>
+		<label>Carrot plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A simple, highly nutritious tuber. Grows well in relatively poor soil.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/Carrot</textureFolderPath>
+		<overDraw>True</overDraw>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawCarrot</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>6.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantOnion</defName>
+		<label>Onion plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A simple, highly nutritious tuber. Grows well in relatively poor soil.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/Onion</textureFolderPath>
+		<overDraw>True</overDraw>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawOnion</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>6.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>1.0</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantRadish</defName>
+		<label>Radish plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A simple, highly nutritious tuber. Grows well in relatively poor soil.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/Radish</textureFolderPath>
+		<overDraw>True</overDraw>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawRadish</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>6.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantTomato</defName>
+		<label>Tomato plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A simple, highly nutritious tuber. Grows well in relatively poor soil.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/Tomato</textureFolderPath>
+		<overDraw>True</overDraw>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawTomato</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>6.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantWheat</defName>
+		<label>Wheat plant</label>
+		<maxHealth>85</maxHealth>
+		<description>A simple, highly nutritious tuber. Grows well in relatively poor soil.</description>
+		<beauty>NiceTiny</beauty>
+		<textureFolderPath>Things/Plant/Wheat</textureFolderPath>
+		<overDraw>True</overDraw>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<food>
+			<quality>Plant</quality>
+			<nutrition>20</nutrition>
+		</food>
+		<plant>
+			<harvestedThingDef>RawWheat</harvestedThingDef>
+			<groundPlantable>true</groundPlantable>
+			<maxFoodYield>6.0</maxFoodYield>
+			<topWindExposure>0.1</topWindExposure>
+			<growthPer20kTicks>1.0</growthPer20kTicks>
+			<lifeSpan>200000</lifeSpan>
+			<fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+			<destroyOnHarvest>true</destroyOnHarvest>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.05</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+
+
+</Plants>

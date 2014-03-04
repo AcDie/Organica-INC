@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>ButcherCorpse</defName>
+		<label>Butcher creature</label>
+		<description>Butchers a creature to obtain its meat in usable form.</description>
+		<jobString>Butchering.</jobString>
+		<workAmount>200</workAmount>
+		<workEffect>Butcher</workEffect>
+		<workTimeSkillNeed>ButcheryTime</workTimeSkillNeed>
+		<efficiencySkillNeed>ButcheryEfficiency</efficiencySkillNeed>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<parentIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<exceptedThingDefs>
+				<li>Mechanoid_Corpse</li>
+			</exceptedThingDefs>
+		</parentIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<exceptedThingDefs>
+				<li>Human_Corpse</li>
+			</exceptedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+
+
+
+</RecipeDefs>

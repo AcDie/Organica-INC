@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>MakeStoneBlocks</defName>
+		<label>Make stone blocks</label>
+		<description>Cuts stone debris into usable stone blocks.</description>
+		<jobString>Stonecutting.</jobString>
+		<workAmount>700</workAmount>
+		<workTimeSkillNeed>StonecuttingTime</workTimeSkillNeed>
+		<efficiencySkillNeed>StonecuttingEfficiency</efficiencySkillNeed>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DebrisRock</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>35</count>
+			</li>
+		</products>
+		<parentIngredientFilter>
+			<thingDefs>
+				<li>DebrisRock</li>
+			</thingDefs>
+		</parentIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>DebrisRock</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+
+
+
+</RecipeDefs>
